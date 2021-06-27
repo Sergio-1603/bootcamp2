@@ -1,2 +1,42 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= yield(:title) %> | Bootcamp app</title>
+</head>
+<body>
+    <div class="app">
+      <main>
+            <div class="app_main-flex">
+                <div class="app_main">
+                    <h1>Bootcamp Hogaru</h1>
+                </div>
+                <div class="app_main-button">
+                    <a href="">Conoceme</a>
+                </div>
+
+            </div>
+
+            <div class="main-episodes--bg">
+                <section id="episodios" class="main-episodes--detail">
+                    <div class="papi">
+                        <div class="papi--left">
+                            
+                        </div>
+                        <div class="papi--right">
+                            <p>
+                               Mi nombre es Sergio Peña, soy estudiante de ingenieria de sistemas y me encuentro en este momento haciendo mi bootcamp de ruby on rails
+                            </p>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+     </main>
+ </div>
+    
+</body>
+</html>
+
+

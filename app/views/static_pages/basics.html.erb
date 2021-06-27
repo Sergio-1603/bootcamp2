@@ -1,2 +1,41 @@
-<h1>StaticPages#basics</h1>
-<p>Find me in app/views/static_pages/basics.html.erb</p>
+<% provide(:title, "Basics") %>
+<!DOCTYPE html>
+ <html>
+<head>
+    <title><%= yield(:title) %> | Bootcamp app</title>
+</head>
+<body>
+     <div class="parrafo">
+            <h1>Bootcamp Ruby On Rails - Basics</h1>
+            <p>
+                <label class="pregunta"> ¿Qué es un resource en el contexto de una aplicación web REST en Ruby on Rails?</label> <br>
+                - Un resource en web REST es similar a un objeto en programación orientada a objetos, es una entidad con datos asociados,
+                relacionado con otros resources y que tiene un conjunto de métodos que diferencian el tipo de respuesta que va a tener el servior a la llamada del resource<br>
+                <label class="pregunta"> ¿Qué puede hacerse con un resource?</label> <br>
+                - Con un resource puedo acceder a la base de datos del servidor y con el método de trasnferencia de recursos a través de solicitudes y respuestas hacer una operación
+                específica.<br>
+                <label class="pregunta"> ¿Qué es RESTful routing?</label><br>
+                El RESTful routing o en español enrutamiento es un conjunto de estándares con el objetivo de mapear métodos HTTP y acciones en el CRUD en un patrón convencional. Esto facilita URL's
+                limpias y de facil entendimieto<br>
+
+                <label class="pregunta">¿Cúantas acciones básicas tiene esta filosofía?</label> <br>
+                - 8 acciones<br>
+               
+                
+               <label class="pregunta">¿Cuáles son y cuáles son sus verbos HTTP?</label><br>
+                <ul>
+                   <li>Obtener información (GET/HEAD)</li>
+                   <li>Solicitar información (OPTIONS)</li>
+                   <li>Editar información (PUT)</li>
+                   <li>Escribir información (POST)</li>
+                   <li>Eliminar información (DELETE)</li>
+                   <li>Establecer una conexión (CONNECT)</li>
+                   <li>Realizar pruebas (TRACE)</li>
+                 </ul>
+            </p>
+</div>
+</body>
+</html>
+ 
+ 
+

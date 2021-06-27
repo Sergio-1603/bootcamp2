@@ -1,2 +1,103 @@
-<h1>StaticPages#git</h1>
-<p>Find me in app/views/static_pages/git.html.erb</p>
+<% provide(:title, "Git") %>
+<!DOCTYPE html>
+<html>
+<head>
+     <title><%= yield(:title) %> | Bootcamp app</title>
+</head>
+<body>
+    <div class="parrafo">
+            <h1>Bootcamp Ruby On Rails - Git</h1>
+            <p>
+                <label class="pregunta"> Inicialización de un repositorio de git nuevo en una aplicación existente.</label><br>
+                Para inicializar un repositorio debemos seguir los siguientes pasos:
+                <ul>
+                  <li>Paso 1: Configurar el entorno en el terminal
+                   <ul>
+                     <li>Paso 1-1: Miramos qué versión de git tenemos con $git version --<br>
+                     Si la versión es menor a 2.28.0 ejecutamos $ source <(curl -sL https://cdn.learnenough.com/upgrade_git) </li>
+                     <li>Paso 1-2: git config --global user.name "Your Name"</li>
+                     <li>Paso 1-3: git config --global user.email your.email@example.com</li>
+                     <li>Paso 1-4: git config --global init.defaultBranch main</li>
+                     <li>Paso 1-5: git config --global alias.co checkout</li>
+                     <li>Paso 1-6: git config --global credential.helper "cache --timeout=86400"</li>
+                  </ul>
+                  </li>
+                 
+                   <li>Paso 2: Creamos el repositorio de git
+                   <ul>
+                     <li>Paso 2-1: git init</li>
+                     <li>Paso 2-2: git add -A</li>
+                     <li>Paso 2-3: git commit -m "Initialize repository"</li>
+                     <li>Paso 2-4: git log</li>
+                     <li>Paso 2-5: git checkout -f</li>
+                   </ul>
+                   
+                   </li>
+                    <li>Paso 3: Creamos el repositorio en Git
+                      <ul>
+                        <li>Paso 3-1: Vamos donde dice ...or push an existing repository from the command line</li>
+                        <li>Paso 3-2: git remote add origin "url"</li>
+                        <li>Paso 3-3: git branch -M main</li>
+                        <li>Paso 3-4: git push -u origin main</li>
+                      </ul>
+                    
+                    </li>
+                    
+                </ul>
+                
+          
+                <label class="pregunta"> Creación de un branch nuevo.</label><br>
+                Para crear una nueva branch ejecutamos "git checkout -b nombre_rama_nueva"<br>
+              
+            
+                
+                
+                <label class="pregunta"> Realizar un commit incluyendo todos los cambios actuales.</label><br>
+                Para hacer un commit con todos los cambios actuales hacemos lo siguiente.<br>
+                - git add ./git add -A #Para agregar todos los cambios hechos<br>
+                - git commit -m "mensaje" #Para agregar el mensaje que estará asociado al commit
+            
+              
+
+                <label class="pregunta">Cómo enviar el código al repositorio remoto.</label><br>
+                git push origin main/master<br>
+                 Hacemos el pull request en git arreglando todos los conflictos que se hayan podido generar
+                
+                
+                
+                 <label class="pregunta">• Cómo configurar el origen del repositorio remoto para evitar escribirlo siempre cada vez que se hace un push o un pull.</label><br>
+                <ur>
+                  <li>Vemos cuantos repositorios remotos tenemos $git remote -v</li>
+                  <li>Añadimos un nuevo repositorio remoto $git remote add clave url_repositorio</li>
+                  <li>Ahora podemos manipular la información del repositorio remoto $git fetch clave</li>
+                </ur>
+    
+                
+                 <label class="pregunta">Diferencia entre un reset y revert.</label><br>
+                Git reset: Lo que hacemos con git reset es que reseteamos los commits hechos en una rama, de tal manera que coincida esta reversión
+                con el estado actual del repositorio, entonces basicamente descarta los commits anteriores<br>
+                Git revert: Git revert a diferencian del reset lo que hace es que toma un commit especifico y crea un nuevo commit con la información
+                del anterior, entonces basicamente deshace los commits anteriores
+          
+                
+                 <label class="pregunta">Además de cambiar de ramas, para qu´e m´as se puede utilizar el comando git checkout.</label><br>
+               Cuando hacemos un git checkout con enlace a un archivo cargamos en el directorio de trabajo una versión antigua del archivo
+                
+                <label class="pregunta">¿Como puede ver los commits que se han realizado en el proyecto?</label><br>
+                $git log //para ver la cantidad de commits<br>
+                $git log -n 5 //Para ver los ultimos 5 commits hechos
+                
+                <label class="pregunta">He modificado dos archivos y quiero hacer un commit por cada uno de ellos, ¿cómo lo puedo hacer?</label><br>
+                Lo unico que tienes que hacer es a la hora de agregar especificar la ruta del primero y despues la del segundo. Ejemplo<br>
+                - git add /archivo1<br>
+                - git commit -m "subiendo el archivo 1"<br>
+                - git add /archvio2<br>
+                - git commit -m "subiendo el archivo 2"
+
+            </p>
+        </div>
+</body>
+</html>
+
+
+

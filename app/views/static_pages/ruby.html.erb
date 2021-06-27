@@ -1,2 +1,85 @@
-<h1>StaticPages#ruby</h1>
-<p>Find me in app/views/static_pages/ruby.html.erb</p>
+<% provide(:title, "Ruby") %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= yield(:title) %> | Bootcamp app</title>
+</head>
+<body>
+    <div class="parrafo">
+            <h1>Bootcamp Ruby On Rails - Ruby</h1>
+            <p>
+                <label class="pregunta"> Interpolación de Strings</label><br>
+                La interpolación de string se hace mediante el comando "#{}" es disponer una expresión dentro del String para que el interprete de Ruby la procese para obtener el String definitivo
+                cabe aclarar que solo funciona con Strings definidos con comillas dobles (""). Un ejemplo práctico seria:<br>
+                nombre = "Mateo"<br>
+                nombre_completo = "#{nombre} Perez" #Mateo Perez
+                
+          
+                <label class="pregunta"> ¿Cómo se declara un array y cómo se adiciona un elemento al final?</label><br>
+              
+                <ul>
+                  <li>Usando corchetes y agregando sus valores.<br>array = [1,2,3,4]</li>
+                  <li>Usando el metodo new de la clase "Array".<br>array = Array.new</li>
+                  <li>Usando la función Array()<br>array = Array.(1..4) # array = [1,2,3,4]</li>
+                </ul>
+                
+                
+                <label class="pregunta">¿Cómo se itera un array utilizando el comando each?</label><br>
+                Para iterar un array usando el comando each, lo hacemos de la siguiente manera.<br>
+                array = [1,2,3,4,5]<br>
+                array.each {|elemento| puts elemento}<br>
+              
+
+                <label class="pregunta">¿Cómo se declara un hash?</label><br>
+                - Un hash no es más que una colección de datos en donde cada valor está asociado a una llave, para declararla lo 
+                podemos hacer de la siguiente manera<br>
+                  hash = {'ciudad' => 'Bogotá', 'pais' => 'Colombia', 'comida' => 'ajiaco', 12 => 'docena'}<br>
+                - Como nos damos cuenta en un hash podemos poner diferentes tipos de datos<br>
+                - Si queremos obtener uno de los datos, lo hacemos mediante su clave en este caso vamos a obtener la ciudad.<br>
+                ciudad = hash['ciudad']      # ciudad =.'Bogotá'
+                
+                 <label class="pregunta">¿Cómo se itera un hash utilizando el comando each?</label><br>
+                 1. Declaramos un hash.<br>
+                h = { "a" => 100, "b" => 200 }<br>
+                2. Lo recorremos.<br>
+                h.each {|key, value| puts "#{key} is #{value}" }
+    
+                
+                 <label class="pregunta">¿Qué es un block en ruby? De un ejemplo de cómo utilizarlo</label><br>
+                Un bloque es un pedazo de codigo encerrado en llaves ({}) o en (do end), su función principal es 
+                agrupar instrucciones y tiene como condición que debe usarse un método primero.<br>
+                  -  Ejemplo con llaves: |1,2,3,4,5|.each {|number| puts number} <br>
+                  -  Ejemplo con do end: |1,2,3,4,5|.each do |number| puts number end<br>
+                ¿Cuando usar cada uno?<br>
+                Si el codigo solo tiene una linea de codigo usamos las llaves, pero si extiende usamos do end
+                
+                
+                 <label class="pregunta">¿Cuál es la convención en Ruby a la hora de nombrar variables?</label><br>
+                <ul>
+                    <li>Varibles locales: Se escriben en minuscula y si es un nombre compuesto
+                    se separan por guion bajo "_".</li>
+                    <li>Varibales globales: Las variables globales deben empezar con "$" y conservar la misma
+                    convención de las varibles locales</li>
+                    <li>Constantes: Por convención siempre se escriben en mayúscula</li>
+                    <li>Varibales de instancia: Son las equivalentes a los valores que se ejecutan dentro de una clase
+                    y deben empezar con un "@" y conservar la misma convención de las varibles locales</li>
+                    <li>Variables de clase: Son las variables globales de la clase por lo que se está obligado a 
+                    escribirlas con "@@". </li>
+                  
+                </ul>
+                
+                <label class="pregunta">¿Qué son attr reader, attr writer y attr accesor?¿Para qué sirven?</label><br>
+                attr reader: Nos permite leer un atributo de una clase, en otros lenguajes de programación se conoce como getter.<br>
+                attr writer: Nos permite escribir o modificar un atributo de una clase, en otros lenguajes de programación se 
+                conoce como setter.<br>
+                attr accesor: Es la combinación de los dos anteriores entonces si la declaramos y la anteponemos a un atributo,
+                estamos permitiendo que se pueda tanto acceder como modificar a este.
+                
+            </p>
+        </div>
+</body>
+</html>
+
+
+
+
