@@ -15,10 +15,7 @@
 <div class="container">
 <nav>
     <ul class="nav navbar-nav navbar-right">
-    <li><h4 id="horas"></h4></li>
-    <li>--</li>
-    <li><h4 id="fecha"></h4></li>
-    <li><%= link_to "Home", 'https://bootcampsp.herokuapp.com/home' %></li>
+  <li><%= link_to "Home", 'https://bootcampsp.herokuapp.com/home' %></li>
     <li><%= link_to "Basics", 'https://bootcampsp.herokuapp.com/basics' %></li>
     <li><%= link_to "Git", 'https://bootcampsp.herokuapp.com/git' %></li>
     <li><%= link_to "Ruby", 'https://bootcampsp.herokuapp.com/ruby' %></li>
@@ -29,6 +26,6 @@
 <div class="container">
 <%= yield %>
 </div>
- <%= javascript_include_tag('manifest.js') %>
+
   </body>
 </html>
