@@ -1,10 +1,4 @@
-<% provide(:title, "Home") %>
-<!DOCTYPE html>
-<html>
-<head>
-    <title><%= yield(:title) %> | Bootcamp app</title>
-</head>
-<body>
+
     <div class="app">
       <main>
             <div class="app_main-flex">
@@ -21,11 +15,11 @@
                 <section id="episodios" class="main-episodes--detail">
                     <div class="papi">
                         <div class="papi--left">
-                            
+                            <%= link_to image_tag("image1.jpeg", alt: "My picture", width: "200"),"" %>
                         </div>
                         <div class="papi--right">
                             <p>
-                               Mi nombre es Sergio Peña, soy estudiante de ingenieria de sistemas y me encuentro en este momento haciendo mi bootcamp de ruby on rails
+                               Mi nombre es Sergio Peña A., soy estudiante de ingenieria de sistemas y me encuentro en este momento haciendo mi bootcamp de ruby on rails
                             </p>
 
                         </div>
@@ -36,7 +30,6 @@
      </main>
  </div>
     
-</body>
-</html>
+
 
 
