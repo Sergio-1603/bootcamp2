@@ -1,0 +1,30 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+padding-top: 60px;
+}
+section {
+overflow: auto;
+}
+textarea {
+resize: vertical;
+}
+.center {
+text-align: center;
+}
+.center h1 {
+margin-bottom: 10px;
+}
+
+#horas{
+    color: white;
+    display: inline-block;
+    padding-top: 5px;
+    padding-right:40px;
+}
+#fecha{
+     color: white;
+     padding-top: 5px;
+      padding-right:35px;
+}

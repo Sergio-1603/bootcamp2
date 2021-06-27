@@ -1,10 +1,4 @@
-<% provide(:title, "Ruby") %>
-<!DOCTYPE html>
-<html>
-<head>
-    <title><%= yield(:title) %> | Bootcamp app</title>
-</head>
-<body>
+
     <div class="parrafo">
             <h1>Bootcamp Ruby On Rails - Ruby</h1>
             <p>
@@ -12,7 +6,7 @@
                 La interpolación de string se hace mediante el comando "#{}" es disponer una expresión dentro del String para que el interprete de Ruby la procese para obtener el String definitivo
                 cabe aclarar que solo funciona con Strings definidos con comillas dobles (""). Un ejemplo práctico seria:<br>
                 nombre = "Mateo"<br>
-                nombre_completo = "#{nombre} Perez" #Mateo Perez
+                nombre_completo = "#{nombre} Perez" #Mateo Perez<br>
                 
           
                 <label class="pregunta"> ¿Cómo se declara un array y cómo se adiciona un elemento al final?</label><br>
@@ -36,16 +30,16 @@
                   hash = {'ciudad' => 'Bogotá', 'pais' => 'Colombia', 'comida' => 'ajiaco', 12 => 'docena'}<br>
                 - Como nos damos cuenta en un hash podemos poner diferentes tipos de datos<br>
                 - Si queremos obtener uno de los datos, lo hacemos mediante su clave en este caso vamos a obtener la ciudad.<br>
-                ciudad = hash['ciudad']      # ciudad =.'Bogotá'
+                ciudad = hash['ciudad']      # ciudad =.'Bogotá'<br>
                 
                  <label class="pregunta">¿Cómo se itera un hash utilizando el comando each?</label><br>
                  1. Declaramos un hash.<br>
                 h = { "a" => 100, "b" => 200 }<br>
                 2. Lo recorremos.<br>
-                h.each {|key, value| puts "#{key} is #{value}" }
+                h.each {|key, value| puts "#{key} is #{value}" }<br>
     
                 
-                 <label class="pregunta">¿Qué es un block en ruby? De un ejemplo de cómo utilizarlo</label><br>
+                 <label class="pregunta">¿Qué es un block en ruby? De un ejemplo de cómo utilizarlo?</label><br>
                 Un bloque es un pedazo de codigo encerrado en llaves ({}) o en (do end), su función principal es 
                 agrupar instrucciones y tiene como condición que debe usarse un método primero.<br>
                   -  Ejemplo con llaves: |1,2,3,4,5|.each {|number| puts number} <br>
@@ -77,8 +71,7 @@
                 
             </p>
         </div>
-</body>
-</html>
+
 
 
 

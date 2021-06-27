@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Ruby on Rails Tutorial Sample App</title>
+    <title><%= yield(:title) %> | Ruby on Rails bootcamp</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -13,9 +13,11 @@
   <body>
     <header class="navbar navbar-fixed-top navbar-inverse">
 <div class="container">
-<%= link_to "sample app", '#', id: "logo" %>
 <nav>
     <ul class="nav navbar-nav navbar-right">
+    <li><h4 id="horas"></h4></li>
+    <li>--</li>
+    <li><h4 id="fecha"></h4></li>
     <li><%= link_to "Home", 'https://bootcampsp.herokuapp.com/home' %></li>
     <li><%= link_to "Basics", 'https://bootcampsp.herokuapp.com/basics' %></li>
     <li><%= link_to "Git", 'https://bootcampsp.herokuapp.com/git' %></li>
@@ -27,6 +29,6 @@
 <div class="container">
 <%= yield %>
 </div>
-
+ <%= javascript_include_tag('manifest.js') %>
   </body>
 </html>
